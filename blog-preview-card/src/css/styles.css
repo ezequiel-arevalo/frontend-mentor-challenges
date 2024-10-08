@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Figtree";
+    font-optical-sizing: auto;
+    src: url('../fonts/Figtree/Figtree-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url('../fonts/Figtree/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --yellow: hsl(47, 88%, 63%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+    background-color: var(--yellow);
+    font-size: 1rem;
+    font-family: 'Figtree', sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
+
+.card {
+    max-width: 20.625rem;
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-950);
+    box-shadow: 10px 10px 0px -2px var(--gray-950);
+}
+
+.card__img > img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.9375rem;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.625rem;
+}
+
+.card__status {
+    background-color: var(--yellow);
+    color: var(--gray-950);
+    padding: 0.3125rem 0.625rem;
+    font-weight: 800;
+}
+
+.card__publish-date
+{
+    font-size: 0.8rem;
+}
+
+.card__title
+{
+    font-family: 'Figtree', sans-serif;
+    font-weight: 800;
+}
+
+.card__text
+{
+    font-family: 'Figtree', sans-serif;
+    font-weight: 500;
+    color: var(--gray-500);
+}
+
+.card__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card__footer > .card__author {
+    font-weight: 800;
+    text-indent: 0.625rem;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--gray-950);
+    margin-top: 2rem;
+}
+
+.attribution > p > a {
+    color: var(--gray-950);
+}
